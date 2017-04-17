@@ -74,7 +74,6 @@ public final class RedisPool {
         try {
             if (jedisPool != null) {
                 Jedis jedis = jedisPool.getResource();
-
                 return jedis;
             } else {
                 return null;
@@ -82,14 +81,12 @@ public final class RedisPool {
         } catch (Exception e) {
             e.printStackTrace();
             return null;
-        }
-    }
-
-    public static void returnResource(final Jedis jedis) {
-        if (jedis != null) {
+        } finally {
+            if (jedisPool != null) {
 //            jedisPool.returnResource(jedis);
-            //jedis.close()取代jedisPool.returnResource(jedis)方法将3.0版本开始
-            jedis.close();
+                //jedis.close()取代jedisPool.returnResource(jedis)方法将3.0版本开始
+                jedisPool.close();
+            }
         }
     }
 }
