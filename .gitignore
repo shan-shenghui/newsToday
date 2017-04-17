@@ -1,0 +1,13 @@
+/hs-pd-parent/target
+/newsTodaySer/target
+/newsTodayCli/config
+/newsTodayCli/build
+/newsTodayCli/.vscode
+/newsTodayCli/.babelrc
+/newsTodayCli/.editorconfig
+/newsTodayCli/.gitignore
+/newsTodayCli/.postcssrc.js
+/newsTodayCli/.project
+/newsTodayCli/index.html
+/newsTodayCli/README.md
+/newsTodaySer/.idea
