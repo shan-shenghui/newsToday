@@ -15,19 +15,22 @@ import java.util.List;
 public class ScoreController {
     private static final Log log = LogFactory.getLog(ScoreController.class);
     @Autowired
-    private IScoreDao score;
+    private IScoreDao iScoreDao;
 
     @RequestMapping("/updata")
     public void FromJPA() {
         log.info("更新数据库数据");
-        log.info("更新数据库数据行数" + score.updateScore(99, 1));
-        score.updateScore(99, 1);
+        iScoreDao.updateScore(99, 3);
     }
 
     @RequestMapping("/getData")
     public List<Score> getData() {
-        log.info("查询数据库" + score.getList());
-        return score.getList();
+        log.info("查询数据库" + iScoreDao.getList());
+        return iScoreDao.getList();
     }
 
+    @RequestMapping("/insertTo")
+    public void insertTo() {
+        iScoreDao.insertOrder(9,67);
+    }
 }

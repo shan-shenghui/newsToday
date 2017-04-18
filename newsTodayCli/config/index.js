@@ -27,7 +27,7 @@ module.exports = {
         autoOpenBrowser: true,
         assetsSubDirectory: 'static',
         assetsPublicPath: '/',
-        proxyTable: { //filter 映射
+        proxyTable: {
             '/do': {
                 target: 'http://127.0.0.1:8080/do',
                 changeOrigin: true,

@@ -11,7 +11,8 @@
        <Icon type="unlocked" color="gray" size="25" ></Icon>
         <Input class="i-name ico" type="text" v-model="formInline.idenfityCode" placeholder="请输入验证码"  style="width: 200px">
         </Input>
-         <Button class="idenfityCode" type="info" @click="getidenfityCode('formInline')"  size="small">{{getidenfityCodeContent}}</Button>
+         <Button class="idenfityCode" type="info" @click="idendify()" v-show = "flage1" size="small">免费获取验证码</Button>
+         <Button class="idenfityCode" type="info" s v-show = "flage2" size="small">重新发送({{timer}})</Button>
     </Form-item>
     <Form-item>
         <div class="sign_sign">
@@ -99,23 +100,19 @@
                         trigger: 'blur'
                     }]
                 },
-                getidenfityCodeContent: '获取验证码'
+                flage1: true,
+                flage2: false,
+                timer: 10, //默认倒数10秒
+                Interval: null //setInterval的对象
             }
         },
         methods: {
             handleSignt(name) { //注册
                 const vm = this
-                    // vm.$store.dispatch('saveUserPhoneCode', vm.formInline.phoneCode)
-                    // vm.$router.push({
-                    //     path: '/signPage2'
-                    // })
                 vm.$refs[name].validate((valid) => {
                     if (valid) {
                         if (vm.formInline.idenfityCode == vm.randomCode && vm.randomCode != -1) {
                             vm.$store.dispatch('saveUserPhoneCode', vm.formInline.phoneCode)
-                            vm.$router.push({
-                                path: '/signPage2'
-                            })
                             this.$http.post(
                                 '/do/loginController/userSign', {
                                     userMess: vm.formInline
@@ -149,9 +146,7 @@
                     }
                 })
             },
-            getidenfityCode(name) { //获取验证码
-                // vm.GetRTime(10)
-
+            getidenfityCode(val) { //获取验证码
                 //
                 this.randomCode = this.getidenfityCodeFromFunc(1000, 9999)
                 if (this.randomCode === -1) {
@@ -186,18 +181,23 @@
             getidenfityCodeFromFunc: function(max, min) {
                 return Math.floor(Math.random() * (max - min)) + min
             },
-            GetRTime: function(time) {
-                const vm = this
-                window.setTimeout(function() {
-
-                }, 1000)
-
-                if (time == 0) {
-                    time = 60
-                    vm.getidenfityCodeContent = '获取验证码'
+            idendify() {
+                this.flage1 = false
+                this.flage2 = true
+                this.startTimer()
+            },
+            update() {
+                if (this.timer == 0) {
+                    this.flage1 = true
+                    this.flage2 = false
+                    this.timer = 10
                 } else {
-                    time--
-                    vm.getidenfityCodeContent = time + 's'
+                    this.timer--
+                }
+            },
+            startTimer() {
+                if (this.timer > 0) {
+                    this.Interval = setInterval(this.update, 1000);
                 }
             }
         }
