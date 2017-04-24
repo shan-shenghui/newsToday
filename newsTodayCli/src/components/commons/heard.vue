@@ -84,15 +84,19 @@
         },
         methods: {
             'getWeatherMess': function() {
-                var cityUrl = 'http://int.dpool.sina.com.cn/iplookup/iplookup.php?format=js'
+                var cityUrl = 'http://pv.sohu.com/cityjson'
                 $.getScript(cityUrl, function(script, textStatus, jqXHR) {
-                    var citytq = remote_ip_info.city; // 获取城市
-                    var url = "http://php.weather.sina.com.cn/iframe/index/w_cl.php?code=js&city=" + citytq + "&day=0&dfc=3"
+                    var citytq = returnCitySN.cname; // 获取城市 (上海市)
+                    if (citytq.substr(citytq.length - 1, citytq.length - 1) == '市') {
+                        citytq = citytq.substr(0, citytq.length - 1)
+                    }
+                    var url = "http://php.weather.sina.com.cn/iframe/index/w_cl.php?code=js&day=0&dfc=3"
                     $.ajax({
                         url: url,
                         dataType: "script",
                         scriptCharset: "gbk",
                         success: function(data) {
+                            debugger
                             var _w = window.SWther.w[citytq][0]
                             var _f = _w.f1 + "_0.png"
                             if (new Date().getHours() > 17) {

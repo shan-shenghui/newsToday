@@ -107,9 +107,11 @@
                 ruleCustom: {
                     name: [{
                         required: true,
-                        message: '姓名不能为空',
-                        min: 3,
-                        message: '账号长度不能小于3位',
+                        message: '账号不能为空',
+                        trigger: 'blur'
+                    }, {
+                        min: 6,
+                        message: '长度不能小于6位',
                         trigger: 'blur'
                     }],
                     passwd: [{
@@ -135,16 +137,15 @@
                     console.log(this)
                     if (valid) {
                         this.$http.post(
-                            'do/loginController/userSign', {
+                            'do/loginController/sign', {
                                 userName: this.formCustom.name,
                                 passwd: this.formCustom.passwd,
                                 phoneCode: this.$store.state.user.phoneCode
                             }, {
                                 emulateJSON: true
                             }
-                        ).then(function(data) {
-                            console.log(data)
-                            if (data.data == 'success') {
+                        ).then(function(response) {
+                            if (response.data[0] == 'success') {
                                 this.$Message.success('注册成功!')
                                 this.$store.dispatch('saveUserName', this.formCustom.name)
                                 this.$router.push({

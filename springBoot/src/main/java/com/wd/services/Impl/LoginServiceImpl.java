@@ -24,7 +24,7 @@ public class LoginServiceImpl implements LoginService {
 
     @Override
     public int userSign(String userName, String passwd, String phoneCode) {
-        String uuid = createUUIdUntil.createUUid();
-        return loginDao.userSign(uuid, userName, passwd, phoneCode);
+        String userId = createUUIdUntil.createUUid();
+        return loginDao.userSign(userId, userName, passwd, phoneCode);
     }
 }

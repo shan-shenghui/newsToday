@@ -4,7 +4,7 @@
   <Form ref="formInline" :model="formInline" :rules="ruleInline">
     <Form-item prop="user">
           <Icon type="person" color="gray" size="25" ></Icon>
-        <Input type="text" v-model="formInline.user" placeholder="请输入手机号"  style="width: 200px">
+        <Input type="text" v-model="formInline.user" placeholder="请输入手机号/用户名"  style="width: 200px">
         </Input>
     </Form-item>
     <Form-item prop="password">
@@ -71,12 +71,12 @@
                 ruleInline: {
                     user: [{
                         required: true,
-                        message: '请填写手机号',
+                        message: '请填写手机号/用户名',
                         trigger: 'blur'
                     }, {
                         max: 11,
-                        min: 11,
-                        message: '手机号输入错误',
+                        min: 6,
+                        message: '长度不能小于6位',
                         trigger: 'blur'
                     }],
                     password: [{
@@ -101,10 +101,10 @@
                             'do/loginController/login', vm.formInline, {
                                 emulateJSON: true
                             }
-                        ).then(function(data) {
-                            if (data.data == 'success') {
+                        ).then(function(response) {
+                            if (response.data[0] == 'success') {
                                 this.$Message.success('登陆成功!');
-                            } else if (data === 'userError') {
+                            } else if (response.data[0] == 'userError') {
                                 this.$Message.success('登陆失败，请检查用户名!');
                             } else {
                                 this.$Message.success('登陆失败，请检查密码!');

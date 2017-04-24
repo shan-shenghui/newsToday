@@ -114,7 +114,7 @@
                         if (vm.formInline.idenfityCode == vm.randomCode && vm.randomCode != -1) {
                             vm.$store.dispatch('saveUserPhoneCode', vm.formInline.phoneCode)
                             this.$http.post(
-                                '/do/loginController/userSign', {
+                                'do/loginController/userSign', {
                                     userMess: vm.formInline
                                 }, {
                                     emulateJSON: true

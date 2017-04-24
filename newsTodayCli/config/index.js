@@ -23,16 +23,16 @@ module.exports = {
     },
     dev: {
         env: require('./dev.env'),
-        port: 8090,
+        port: 8082,
         autoOpenBrowser: true,
         assetsSubDirectory: 'static',
         assetsPublicPath: '/',
         proxyTable: {
             '/do': {
-                target: 'http://127.0.0.1:8080/do',
+                target: 'http://127.0.0.1:8080/',
                 changeOrigin: true,
                 pathRewrite: {
-                    '^/do': ''
+                    '^/do': '/do'
                 }
             }
         },

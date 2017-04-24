@@ -17,6 +17,6 @@ public interface LoginDao extends JpaRepository<LoginEntity, Integer> {
 
     @Transactional
     @Modifying
-    @Query(value = "insert into  userLogin (uuid,userName,passwd,phoneCode) values (?1,?2,?3,?4) ", nativeQuery = true)
-    int userSign(String uuid, String userName, String passwd, String phoneCode);
+    @Query(value = "insert into  userLogin (userId,userName,passWord,phoneCode) values (?1,?2,?3,?4) ", nativeQuery = true)
+    int userSign(String userId, String userName, String passWord, String phoneCode);
 }
