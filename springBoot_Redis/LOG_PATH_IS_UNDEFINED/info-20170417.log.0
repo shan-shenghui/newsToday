@@ -1,0 +1,99 @@
+2017-04-17 15:44:29.397 [restartedMain] INFO  com.wd.Application -Starting Application on ssh with PID 7068 (D:\projects\newsToday\springBoot\target\classes started by aaa in D:\projects\newsToday\springBoot)
+2017-04-17 15:44:29.399 [restartedMain] INFO  com.wd.Application -No active profile set, falling back to default profiles: default
+2017-04-17 15:44:29.537 [restartedMain] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext -Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4ebf837a: startup date [Mon Apr 17 15:44:29 CST 2017]; root of context hierarchy
+2017-04-17 15:44:30.945 [restartedMain] INFO  o.s.b.f.s.DefaultListableBeanFactory -Overriding bean definition for bean 'dataSource' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Generic; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Generic.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Tomcat; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Tomcat.class]]
+2017-04-17 15:44:32.011 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a934c6fc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-04-17 15:44:32.667 [restartedMain] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer -Tomcat initialized with port(s): 8080 (http)
+2017-04-17 15:44:32.678 [restartedMain] INFO  o.a.catalina.core.StandardService -Starting service Tomcat
+2017-04-17 15:44:32.679 [restartedMain] INFO  o.a.catalina.core.StandardEngine -Starting Servlet Engine: Apache Tomcat/8.5.11
+2017-04-17 15:44:32.777 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring embedded WebApplicationContext
+2017-04-17 15:44:32.777 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader -Root WebApplicationContext: initialization completed in 3240 ms
+2017-04-17 15:44:33.045 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean -Mapping servlet: 'dispatcherServlet' to [/]
+2017-04-17 15:44:33.048 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean -Mapping servlet: 'com.wd.servlet.MyServlet2' to [/xs/*]
+2017-04-17 15:44:33.053 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-04-17 15:44:33.054 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-04-17 15:44:33.054 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-04-17 15:44:33.055 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'requestContextFilter' to: [/*]
+2017-04-17 15:44:33.056 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'myFilter' to urls: [/*]
+2017-04-17 15:44:33.708 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-04-17 15:44:33.724 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper -HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-04-17 15:44:33.803 [restartedMain] INFO  org.hibernate.Version -HHH000412: Hibernate Core {5.0.12.Final}
+2017-04-17 15:44:33.805 [restartedMain] INFO  org.hibernate.cfg.Environment -HHH000206: hibernate.properties not found
+2017-04-17 15:44:33.807 [restartedMain] INFO  org.hibernate.cfg.Environment -HHH000021: Bytecode provider name : javassist
+2017-04-17 15:44:33.864 [restartedMain] INFO  o.h.annotations.common.Version -HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-04-17 15:44:34.055 [restartedMain] INFO  org.hibernate.dialect.Dialect -HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-04-17 15:44:34.574 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-04-17 15:44:34.944 [restartedMain] INFO  o.h.h.i.QueryTranslatorFactoryInitiator -HHH000397: Using ASTQueryTranslatorFactory
+2017-04-17 15:44:35.428 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter -Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4ebf837a: startup date [Mon Apr 17 15:44:29 CST 2017]; root of context hierarchy
+2017-04-17 15:44:35.526 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/customerController/hello]}" onto public java.lang.String com.wd.controller.CustomerController.index()
+2017-04-17 15:44:35.531 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/customerController/list]}" onto public java.util.List<java.util.Map<java.lang.String, java.lang.String>> com.wd.controller.CustomerController.getList()
+2017-04-17 15:44:35.532 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/customerController/showPerson]}" onto public com.wd.domain.Person com.wd.controller.CustomerController.showPerson()
+2017-04-17 15:44:35.533 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/customerController/info]}" onto public java.util.Map<java.lang.String, java.lang.String> com.wd.controller.CustomerController.getInfo(java.lang.String)
+2017-04-17 15:44:35.535 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/scoreController/getData]}" onto public java.util.List<com.wd.domain.Score> com.wd.controller.ScoreController.getData()
+2017-04-17 15:44:35.536 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/scoreController/updata]}" onto public void com.wd.controller.ScoreController.FromJPA()
+2017-04-17 15:44:35.539 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/studentController/insertTo]}" onto public void com.wd.controller.StudentController.insertTo()
+2017-04-17 15:44:35.539 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/studentController/getStu]}" onto public java.util.List com.wd.controller.StudentController.getStu()
+2017-04-17 15:44:35.541 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/studentController/deleteMs]}" onto public void com.wd.controller.StudentController.deleteMs()
+2017-04-17 15:44:35.545 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-04-17 15:44:35.546 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-04-17 15:44:35.592 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-04-17 15:44:35.593 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-04-17 15:44:35.658 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-04-17 15:44:36.029 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer -LiveReload server is running on port 35729
+2017-04-17 15:44:36.215 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter -Registering beans for JMX exposure on startup
+2017-04-17 15:44:36.301 [restartedMain] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer -Tomcat started on port(s): 8080 (http)
+2017-04-17 15:44:36.310 [restartedMain] INFO  com.wd.Application -Started Application in 7.899 seconds (JVM running for 8.528)
+2017-04-17 16:03:14.973 [restartedMain] INFO  com.wd.Application -Starting Application on ssh with PID 9036 (D:\projects\newsToday\springBoot\target\classes started by aaa in D:\projects\newsToday\springBoot)
+2017-04-17 16:03:14.974 [restartedMain] INFO  com.wd.Application -No active profile set, falling back to default profiles: default
+2017-04-17 16:03:15.039 [restartedMain] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext -Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4dcb3007: startup date [Mon Apr 17 16:03:15 CST 2017]; root of context hierarchy
+2017-04-17 16:03:16.567 [restartedMain] INFO  o.s.b.f.s.DefaultListableBeanFactory -Overriding bean definition for bean 'dataSource' with a different definition: replacing [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Generic; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Generic.class]] with [Root bean: class [null]; scope=; abstract=false; lazyInit=false; autowireMode=3; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=org.springframework.boot.autoconfigure.jdbc.DataSourceConfiguration$Tomcat; factoryMethodName=dataSource; initMethodName=null; destroyMethodName=(inferred); defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Tomcat.class]]
+2017-04-17 16:03:17.271 [restartedMain] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker -Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$35394698] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-04-17 16:03:17.897 [restartedMain] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer -Tomcat initialized with port(s): 8080 (http)
+2017-04-17 16:03:17.906 [restartedMain] INFO  o.a.catalina.core.StandardService -Starting service Tomcat
+2017-04-17 16:03:17.907 [restartedMain] INFO  o.a.catalina.core.StandardEngine -Starting Servlet Engine: Apache Tomcat/8.5.11
+2017-04-17 16:03:17.998 [localhost-startStop-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring embedded WebApplicationContext
+2017-04-17 16:03:17.998 [localhost-startStop-1] INFO  o.s.web.context.ContextLoader -Root WebApplicationContext: initialization completed in 2959 ms
+2017-04-17 16:03:18.223 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean -Mapping servlet: 'dispatcherServlet' to [/]
+2017-04-17 16:03:18.225 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean -Mapping servlet: 'com.wd.servlet.MyServlet2' to [/xs/*]
+2017-04-17 16:03:18.231 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-04-17 16:03:18.231 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-04-17 16:03:18.232 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-04-17 16:03:18.232 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'requestContextFilter' to: [/*]
+2017-04-17 16:03:18.232 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean -Mapping filter: 'myFilter' to urls: [/*]
+2017-04-17 16:03:18.856 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-04-17 16:03:18.871 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper -HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-04-17 16:03:18.941 [restartedMain] INFO  org.hibernate.Version -HHH000412: Hibernate Core {5.0.12.Final}
+2017-04-17 16:03:18.942 [restartedMain] INFO  org.hibernate.cfg.Environment -HHH000206: hibernate.properties not found
+2017-04-17 16:03:18.944 [restartedMain] INFO  org.hibernate.cfg.Environment -HHH000021: Bytecode provider name : javassist
+2017-04-17 16:03:19.030 [restartedMain] INFO  o.h.annotations.common.Version -HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-04-17 16:03:19.247 [restartedMain] INFO  org.hibernate.dialect.Dialect -HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-04-17 16:03:19.840 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean -Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-04-17 16:03:20.266 [restartedMain] INFO  o.h.h.i.QueryTranslatorFactoryInitiator -HHH000397: Using ASTQueryTranslatorFactory
+2017-04-17 16:03:20.777 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter -Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@4dcb3007: startup date [Mon Apr 17 16:03:15 CST 2017]; root of context hierarchy
+2017-04-17 16:03:20.855 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/customerController/hello]}" onto public java.lang.String com.wd.controller.CustomerController.index()
+2017-04-17 16:03:20.856 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/customerController/showPerson]}" onto public com.wd.domain.Person com.wd.controller.CustomerController.showPerson()
+2017-04-17 16:03:20.857 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/customerController/info]}" onto public java.util.Map<java.lang.String, java.lang.String> com.wd.controller.CustomerController.getInfo(java.lang.String)
+2017-04-17 16:03:20.858 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/customerController/list]}" onto public java.util.List<java.util.Map<java.lang.String, java.lang.String>> com.wd.controller.CustomerController.getList()
+2017-04-17 16:03:20.859 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/loginController/login]}" onto public java.lang.String com.wd.controller.loginController.handleLogin(java.lang.String,java.lang.String)
+2017-04-17 16:03:20.860 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/scoreController/getData]}" onto public java.util.List<com.wd.domain.Score> com.wd.controller.ScoreController.getData()
+2017-04-17 16:03:20.861 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/scoreController/updata]}" onto public void com.wd.controller.ScoreController.FromJPA()
+2017-04-17 16:03:20.862 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/studentController/insertTo]}" onto public void com.wd.controller.StudentController.insertTo()
+2017-04-17 16:03:20.863 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/studentController/getStu]}" onto public java.util.List com.wd.controller.StudentController.getStu()
+2017-04-17 16:03:20.863 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/studentController/deleteMs]}" onto public void com.wd.controller.StudentController.deleteMs()
+2017-04-17 16:03:20.865 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-04-17 16:03:20.866 [restartedMain] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping -Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-04-17 16:03:20.920 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-04-17 16:03:20.920 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-04-17 16:03:21.018 [restartedMain] INFO  o.s.w.s.h.SimpleUrlHandlerMapping -Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-04-17 16:03:21.530 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer -LiveReload server is running on port 35729
+2017-04-17 16:03:21.702 [restartedMain] INFO  o.s.j.e.a.AnnotationMBeanExporter -Registering beans for JMX exposure on startup
+2017-04-17 16:03:21.845 [restartedMain] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer -Tomcat started on port(s): 8080 (http)
+2017-04-17 16:03:21.852 [restartedMain] INFO  com.wd.Application -Started Application in 7.443 seconds (JVM running for 9.282)
+2017-04-17 16:03:51.610 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] -Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-04-17 16:03:51.610 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -FrameworkServlet 'dispatcherServlet': initialization started
+2017-04-17 16:03:51.627 [http-nio-8080-exec-1] INFO  o.s.web.servlet.DispatcherServlet -FrameworkServlet 'dispatcherServlet': initialization completed in 16 ms
+2017-04-17 16:03:51.671 [http-nio-8080-exec-1] INFO  com.wd.controller.loginController -登陆成功！
