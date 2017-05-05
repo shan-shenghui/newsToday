@@ -1,7 +1,8 @@
 <template>
        <div class="main_header col">
-            <div class="col-md col-md-8">
-                <span><div id="weather"></div></span>
+            <div class="col-md col-md-8" @mouseover="" @mouseout="">
+                <span>
+                    <div id="weather"></div></span>
             </div>
             <div class="col-md col-md-4">
                 <span v-for="item in headMess" :key="item.key" >
@@ -18,6 +19,7 @@
         left: 0px;
         right: 0px;
         top: 0px;
+        min-width: 1500px;
         background-color: #222222;
     }
     
@@ -33,6 +35,11 @@
         color: rgba(255, 255, 255, .9);
         font-size: 16px;
         line-height: 40px;
+    }
+    
+    .col-md-4 span {
+        float: right;
+        display: block;
     }
     
     .col-md span:hover {
@@ -51,31 +58,32 @@
         data() {
             return {
                 headMess: [{
-                    name: '登陆',
+                    name: '更多',
                     key: 1,
-                    class: {
-                        color: 'red'
-                    }
-                }, {
-                    name: '问答',
-                    key: 2,
-                    class: {}
-                }, {
-                    name: '图虫',
-                    key: 3,
-                    class: {}
-                }, {
-                    name: '头号',
-                    key: 4,
                     class: {}
                 }, {
                     name: '反馈',
+                    key: 2,
+                    class: {}
+                }, {
+                    name: '头号',
+
+                    key: 3,
+                    class: {}
+                }, {
+                    name: '图虫',
+                    key: 4,
+                    class: {}
+                }, {
+                    name: '问答',
                     key: 5,
                     class: {}
                 }, {
-                    name: '更多',
+                    name: '登陆',
                     key: 6,
-                    class: {}
+                    class: {
+                        color: 'red'
+                    }
                 }]
             }
         },
@@ -96,7 +104,6 @@
                         dataType: "script",
                         scriptCharset: "gbk",
                         success: function(data) {
-                            debugger
                             var _w = window.SWther.w[citytq][0]
                             var _f = _w.f1 + "_0.png"
                             if (new Date().getHours() > 17) {
@@ -104,7 +111,8 @@
                             }
                             var img = "<img width='16px' height='16px' src='http://i2.sinaimg.cn/dy/main/weather/weatherplugin/wthIco/20_20/" + _f +
                                 "' />"
-                            var tq = citytq + "&nbsp; " + img + "&nbsp; " + _w.s1 + "&nbsp; " + _w.t1 + "℃～" + _w.t2 + "℃ "
+                            var icon_more = "&nbsp;<div  style = 'border-top: 6px solid white; border-left:6px solid transparent;border-right:6px solid transparent;width: 0;height: 0;display:inline-block'></div>"
+                            var tq = citytq + "&nbsp; " + img + "&nbsp; " + _w.s1 + "&nbsp; " + _w.t1 + "℃～" + _w.t2 + "℃ " + icon_more
                             $('#weather').html(tq)
                         }
                     })
@@ -120,27 +128,27 @@
                         break
                     case 2:
                         vm.$router.push({
-                            path: '/login'
+                            path: '/'
                         })
                         break
                     case 3:
                         vm.$router.push({
-                            path: '/login'
+                            path: '/'
                         })
                         break
                     case 4:
                         vm.$router.push({
-                            path: '/login'
+                            path: '/'
                         })
                         break
                     case 5:
                         vm.$router.push({
-                            path: '/login'
+                            path: '/'
                         })
                         break
                     case 6:
                         vm.$router.push({
-                            path: '/login'
+                            path: '/'
                         })
                         break
                 }
