@@ -11,7 +11,7 @@
     </template>
 <style scoped>
     .main {
-        left: 0px;
+        left: 10000px;
         right: 0px;
         top: 0px;
         bottom: 0px;
